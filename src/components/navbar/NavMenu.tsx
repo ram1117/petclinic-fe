@@ -1,8 +1,12 @@
 import Link from "next/link";
 
-const NavMenu = () => {
+interface NavMenuProps {
+  className?: string;
+}
+
+const NavMenu = ({ className = "" }: NavMenuProps) => {
   return (
-    <ul className="flex gap-8 lg:text-lg font-medium">
+    <ul className={`lg:text-lg font-medium ${className}`}>
       <li className="">
         <Link href="/treatments">Treatments</Link>
       </li>
