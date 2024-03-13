@@ -6,4 +6,10 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* .main-page {
+    background: url('/main-bg.jpg') no-repeat;
+    background-size: cover;
+    background-color: rgb(0,0,0,0.2);
+  } */
 }
