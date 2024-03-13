@@ -1,65 +1,27 @@
 import Link from "next/link";
 import HeaderWrapper from "../../../atoms/HeaderWrapper";
+import FormInput from "../../../atoms/FormInput";
 
 const SignupPage = () => (
   <div>
     <HeaderWrapper className="text-center" title="Sign Up" />
     <form className="w-full p-4 lg:w-2/3 mx-auto my-4 max-w-[600px]">
-      <div className="my-4 flex gap-4 lg:flex-row flex-col gap-4 lg:items-center">
-        <label htmlFor="fullname" className="w-full lg:w-1/3">
-          Full Name
-        </label>
-        <input
-          type="text"
-          id="fullname"
-          name="fullname"
-          className="border-2 p-2 rounded-md  w-full lg:w-2/3"
-        />
-      </div>
-      <div className="my-4 flex gap-4 lg:flex-row flex-col gap-4 lg:items-center">
-        <label htmlFor="email" className="w-full lg:w-1/3">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          className="border-2 p-2 rounded-md  w-full lg:w-2/3"
-        />
-      </div>
-      <div className="my-4 flex gap-4 lg:flex-row flex-col gap-4 lg:items-center">
-        <label htmlFor="username" className="w-full lg:w-1/3">
-          Username
-        </label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          className="border-2 p-2 rounded-md  w-full lg:w-2/3"
-        />
-      </div>
-      <div className="my-4 flex gap-4 lg:flex-row flex-col gap-4 lg:items-center">
-        <label htmlFor="password" className="w-full lg:w-1/3">
-          Password
-        </label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          className="border-2 p-2 rounded-md w-full lg:w-2/3"
-        />
-      </div>
-      <div className="my-4 flex gap-4 lg:flex-row flex-col gap-4 lg:items-center">
-        <label htmlFor="password1" className="w-full lg:w-1/3">
-          Confirm Password
-        </label>
-        <input
-          type="password"
-          id="password1"
-          name="password1"
-          className="border-2 p-2 rounded-md w-full lg:w-2/3"
-        />
-      </div>
+      <FormInput id="fullname" type="text" name="fullname" label="Full Name" />
+      <FormInput id="email" type="email" name="email" label="E-Mail" />
+      <FormInput id="username" type="text" name="username" label="Username" />
+      <FormInput
+        id="password"
+        type="password"
+        name="password"
+        label="Password"
+      />
+      <FormInput
+        id="password1"
+        type="password"
+        name="password1"
+        label="Confirm Password"
+      />
+
       <div className="flex justify-end">
         <button
           type="submit"
