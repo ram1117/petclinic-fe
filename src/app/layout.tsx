@@ -16,12 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${montserrat.variable} ${kanit.variable} min-h-screen bg-main-bg-mobile md:bg-main-bg bg-contain bg-no-repeat md:bg-cover font-poppins`}
+        className={`${poppins.variable} ${montserrat.variable} ${kanit.variable} bg-main-bg-mobile md:bg-main-bg bg-contain bg-no-repeat md:bg-cover bg-center lg:bg-top font-poppins`}
       >
         <Navbar />
-        <main className="max-w-[1224px] pt-20 border-2 min-h-screen mx-auto">
-          {children}
-        </main>
+        <main className="max-w-[1224px] pt-12 mx-auto">{children}</main>
       </body>
     </html>
   );

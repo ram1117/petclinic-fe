@@ -21,6 +21,11 @@ const config: Config = {
         montserrat: "var(--font-montserrat)",
         kanit: "var(--font-kanit)",
       },
+      colors: {
+        link: "#55e9bc",
+        "primary-text": "#000000",
+        "secondary-text": "#ffffff",
+      },
     },
   },
   plugins: [],
