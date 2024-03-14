@@ -54,7 +54,11 @@ const SignupForm = () => {
         label="Confirm Password"
         error={formState.errors["confirmpassword"]?.join(" , ")}
       />
-
+      {formState.errors["_form"] && (
+        <p className="text-sm text-red-500 my-2">
+          {formState.errors["_form"].join(" , ")}
+        </p>
+      )}
       <div className="flex justify-end">
         <button
           type="submit"

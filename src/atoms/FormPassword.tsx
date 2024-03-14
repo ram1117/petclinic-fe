@@ -17,9 +17,6 @@ const FormPassword = ({
   onChange = undefined,
 }: FormInputProps) => {
   const [showPass, setShowPass] = useState(false);
-  useEffect(() => {
-    console.log(showPass);
-  }, [showPass]);
 
   const ShowPassImage = (
     <ImageWrapper
