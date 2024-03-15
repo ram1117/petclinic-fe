@@ -3,6 +3,7 @@
 import z from "zod";
 import { SignupFormStateType } from "./types";
 import { redirect } from "next/navigation";
+import apiPaths from "../apiPaths";
 
 const validationSchema = z
   .object({
@@ -35,7 +36,7 @@ const SignupAction = async (
   }
 
   try {
-    const response = await fetch("http://localhost:3001/auth/signup", {
+    const response = await fetch(apiPaths.signup(), {
       method: "POST",
       headers: {
         "Content-type": "application/json",
