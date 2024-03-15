@@ -14,6 +14,10 @@ const apiPaths = {
   signup() {
     return `${baseUrl}/auth/signup`;
   },
+
+  getDoctors() {
+    return `${baseUrl}/doctors`;
+  },
 };
 
 export default apiPaths;

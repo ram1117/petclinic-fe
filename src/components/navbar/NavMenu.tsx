@@ -14,7 +14,7 @@ const NavMenu = ({ className = "" }: NavMenuProps) => {
         <Link href="/doctors">Our Doctors</Link>
       </li>
       <li className="">
-        <Link href="/treatments">Account</Link>
+        <Link href="/account">Account</Link>
       </li>
     </ul>
   );
