@@ -18,6 +18,10 @@ const apiPaths = {
   getDoctors() {
     return `${baseUrl}/doctors`;
   },
+
+  getTreatments() {
+    return `${baseUrl}/treatments`;
+  },
 };
 
 export default apiPaths;

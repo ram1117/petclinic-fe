@@ -17,11 +17,9 @@ const DoctorsPage = async () => {
     response.json(),
   );
 
-  console.log(doctorsData);
-
   return (
-    <section className="min-h-[50vh] flex flex-col gap-4 items-center p-8 border-2">
-      <HeaderWrapper title="Our Team" />
+    <section className="min-h-[50vh] flex flex-col gap-4 items-center p-4">
+      <HeaderWrapper title="Our Team" className="mb-4" />
       {doctorsData.error && (
         <p className="my-8 text-lg">Unable to retrieve data at this moment..</p>
       )}
