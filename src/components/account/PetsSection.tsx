@@ -18,6 +18,8 @@ interface PetsSectionProps {
 const PetsSection = ({ pets }: PetsSectionProps) => {
   const [openForm, setOpenForm] = useState(false);
 
+  const hasPets = pets.length !== 0;
+
   return (
     <div className="bg-white shadow-lg shadow-slate-300 rounded-md p-4 relative">
       <div className="my-4 flex justify-between items-center border-b py-2">
@@ -37,10 +39,12 @@ const PetsSection = ({ pets }: PetsSectionProps) => {
         </div>
       )}
 
-      {pets.length === 0 && <p className="my-4">You have not added any pet</p>}
+      {!hasPets && (
+        <p className="my-4 text-center">You have not added any pet</p>
+      )}
 
       <ul className="p-2 lg:p-4">
-        {pets.length !== 0 &&
+        {hasPets &&
           pets.map((item) => (
             <li className="flex justify-between my-2" key={item.id}>
               <h2 className="font-medium">{item.name}</h2>
