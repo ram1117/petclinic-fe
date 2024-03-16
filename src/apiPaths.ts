@@ -29,6 +29,10 @@ const apiPaths = {
   getTreatments() {
     return `${baseUrl}/treatments`;
   },
+
+  createAppointment() {
+    return `${baseUrl}/appointment`;
+  },
 };
 
 export default apiPaths;

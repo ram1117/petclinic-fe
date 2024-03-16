@@ -23,3 +23,13 @@ export interface AddPetFormStateType {
     _form?: string[];
   };
 }
+
+export interface BookingStateType {
+  errors: {
+    petId?: string[];
+    treatmentId?: string[];
+    doctorId?: string[];
+    slotId?: string[];
+    _form?: string[];
+  };
+}
