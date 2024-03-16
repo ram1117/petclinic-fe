@@ -5,6 +5,7 @@ interface FormInputProps {
   type: "password" | "email" | "text";
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   error?: string;
+  required?: boolean;
 }
 
 const FormInput = ({
@@ -14,6 +15,7 @@ const FormInput = ({
   type,
   onChange = undefined,
   error = "",
+  required = false,
 }: FormInputProps) => (
   <div className="my-4 flex gap-4 lg:flex-row flex-col gap-4 lg:items-center">
     <label htmlFor={id} className="w-full lg:w-1/3">
@@ -26,6 +28,8 @@ const FormInput = ({
         name={name}
         className="border-2 p-2 rounded-md "
         onChange={onChange}
+        required={required}
+        minLength={3}
       />
       {error && <p className="text-sm text-red-500 my-1">{error}</p>}
     </div>

@@ -16,3 +16,10 @@ export interface SigninFormStateType {
     _form?: string[];
   };
 }
+
+export interface AddPetFormStateType {
+  success: boolean;
+  errors: {
+    _form?: string[];
+  };
+}

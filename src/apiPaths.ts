@@ -1,4 +1,4 @@
-const baseUrl = process.env.BASE_URL;
+const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
 const apiPaths = {
   getUser() {
@@ -8,6 +8,13 @@ const apiPaths = {
     return `${baseUrl}/pets/`;
   },
 
+  createPet() {
+    return `${baseUrl}/pets/new`;
+  },
+
+  getPetTypes() {
+    return `${baseUrl}/pets/pettypes`;
+  },
   signin() {
     return `${baseUrl}/auth/signin`;
   },
