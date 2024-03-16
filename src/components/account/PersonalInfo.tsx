@@ -1,3 +1,4 @@
+import SignoutAction from "../../actions/SignoutAction";
 import HeaderWrapper from "../../atoms/HeaderWrapper";
 
 interface PersonalInfoProps {
@@ -10,22 +11,16 @@ interface PersonalInfoProps {
 
 const PersonalInfo = ({ userInfo }: PersonalInfoProps) => {
   return (
-    <div className="border-2 w-full lg:w-2/3">
-      <HeaderWrapper title="Profile" className="text-center my-6" />
-      <ul>
-        <li className="grid grid-cols-2 gap-4">
-          <p>Full Name</p>
-          <p>{userInfo.fullname}</p>
-        </li>
-        <li className="grid grid-cols-2 gap-4">
-          <p>Email</p>
-          <p>{userInfo.email}</p>
-        </li>
-        <li className="grid grid-cols-2 gap-4">
-          <p>User Name</p>
-          <p>{userInfo.username}</p>
-        </li>
-      </ul>
+    <div className="flex flex-col gap-6 sm:flex-row items-center justify-between p-4 lg:p-8 w-full shadow-md shadow-slate-200 bg-white rounded-md">
+      <p className="capitalize text-base">{userInfo.fullname}</p>
+      <form action={SignoutAction}>
+        <button
+          type="submit"
+          className="rounded-md w-max px-6 py-1 lg:py-2 bg-link text-sm lg:text-base text-secondary-text"
+        >
+          Sign Out
+        </button>
+      </form>
     </div>
   );
 };

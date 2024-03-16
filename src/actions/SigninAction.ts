@@ -54,7 +54,7 @@ const SigninAction = async (
       },
     };
   }
-  redirect("/");
+  redirect("/account");
 };
 
 export default SigninAction;

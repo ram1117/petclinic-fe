@@ -12,7 +12,7 @@ const AccountPage = async () => {
     return <h2>{response.message}</h2>;
   }
   return (
-    <section className="min-h-[50vh] flex flex-col gap-12 lg:gap-4 lg:flex-row justify-center p-8 border-2">
+    <section className="min-h-[50vh]  p-8">
       <PersonalInfo userInfo={response} />
     </section>
   );
