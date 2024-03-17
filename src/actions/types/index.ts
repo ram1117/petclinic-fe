@@ -16,3 +16,20 @@ export interface SigninFormStateType {
     _form?: string[];
   };
 }
+
+export interface AddPetFormStateType {
+  success: boolean;
+  errors: {
+    _form?: string[];
+  };
+}
+
+export interface BookingStateType {
+  errors: {
+    petId?: string[];
+    treatmentId?: string[];
+    doctorId?: string[];
+    slotId?: string[];
+    _form?: string[];
+  };
+}
