@@ -7,7 +7,7 @@ Tech stack - Typescript, TailwindCSS
 
 ### Live Demo
 
-[Live Demo on Vercel](TBA)
+[Live Demo on Vercel](https://petclinic-fe.vercel.app/)
 
 ## Getting Started
 
