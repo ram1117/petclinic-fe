@@ -10,5 +10,5 @@ export const middleware = (request: NextRequest, response: NextResponse) => {
 };
 
 export const config = {
-  matcher: ["/account/:path*"],
+  matcher: ["/account/:path*", "/appointments/:path*"],
 };
