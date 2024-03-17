@@ -4,6 +4,7 @@ import { SigninFormStateType } from "./types";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import apiPaths from "../apiPaths";
+import { error } from "console";
 
 const validationSchema = z.object({
   username: z
@@ -34,9 +35,9 @@ const SigninAction = async (
       body: JSON.stringify(validation.data),
     });
 
-    const message = await response.json();
     if (response.status !== 201) {
-      return { errors: { _form: [message] } };
+      const message = await response.json();
+      return { errors: { _form: [message.message] } };
     }
 
     const setCookieHeader = response.headers.get("Set-Cookie");

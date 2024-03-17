@@ -30,6 +30,18 @@ const apiPaths = {
     return `${baseUrl}/treatments`;
   },
 
+  getAllAppointment() {
+    return `${baseUrl}/appointment`;
+  },
+
+  getOneAppointemnt(id: string) {
+    return `${baseUrl}/appointment/${id}`;
+  },
+
+  cancelAppointemnt(id: string) {
+    return `${baseUrl}/appointment/${id}`;
+  },
+
   createAppointment() {
     return `${baseUrl}/appointment`;
   },

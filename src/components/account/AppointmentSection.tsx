@@ -29,12 +29,22 @@ const AppointmentSection = ({ appointments }: AppointmentSectionProps) => {
       {!hasAppointments && <p className="my-4 text-center">No appointments</p>}
       <ul>
         {hasAppointments &&
-          appointments.map((item) => (
-            <li className="flex justify-between my-2" key={item.id}>
-              <h2 className="font-medium">{item.slot.slot}</h2>
-              <h2 className="text-sm italic">{item.doctor.name}</h2>
-            </li>
-          ))}
+          appointments.map((item) => {
+            const date = new Date(item.slot.slot);
+
+            return (
+              <li className="flex justify-between my-2" key={item.id}>
+                <h2 className="font-medium">
+                  {date.toLocaleDateString()} -{" "}
+                  {date.toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </h2>
+                <h2 className="text-sm italic">{item.doctor.name}</h2>
+              </li>
+            );
+          })}
       </ul>
     </div>
   );
